@@ -5,15 +5,16 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 const AppStack = createStackNavigator();
 
-import Incidents from './pages/Incidents';
-import Detail from './pages/Detail';
+import Home from './Home'
+import MapaRegioes from './Maps/MapaRegioes';
 
 function Routes() {
     return (
         <NavigationContainer>
-            <AppStack.Navigator screenOptions={{headerShown:false}}>
-                <AppStack.Screen name="Incidents" component={Incidents} />
-                <AppStack.Screen name="Detail" component={Detail} />
+            <AppStack.Navigator screenOptions={{ headerShown: false }}>
+                <AppStack.Screen name="Home" component={Home} />
+                <AppStack.Screen name="MapaRegioes" component={MapaRegioes} />
+                {/* <AppStack.Screen name="Detail" component={Detail} /> */}
             </AppStack.Navigator>
 
         </NavigationContainer>

@@ -4,18 +4,19 @@ import { StyleSheet, Text, View } from 'react-native';
 import { SvgXml } from 'react-native-svg';
 import Map from './src/Maps/Map'
 import BrMap from './src/Maps/BrMap'
-
+import Routes from './src/routes'
 
 const App = () => {
 
 
 
   return (
-    <View style={styles.container}>
-      <View style={styles.mapbox}>
-        <Map />
-      </View>
-    </View>
+    <Routes />
+    // <View style={styles.container}>
+    //   <View style={styles.mapbox}>
+    //     <Map />
+    //   </View>
+    // </View>
 
   );
 }
