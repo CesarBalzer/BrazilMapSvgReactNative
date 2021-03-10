@@ -15,8 +15,8 @@ function RioGrandeDoNorte(props) {
           ></Path>
         </Svg>
         <Text style={styles.rioGrandeDoNorte}>
-          Rio Grande do Norte
-                  </Text>
+          Rio Grande {"\n"} do Norte
+        </Text>
       </View>
     </View>
   );
@@ -42,15 +42,16 @@ const styles = StyleSheet.create({
     borderColor: "transparent"
   },
   rioGrandeDoNorte: {
-    top: 0,
-    left: 5,
+    top: 12,
+    left: 8,
     position: "absolute",
     fontFamily: "roboto-regular",
     color: "#121212",
-    height: 12,
-    width: 26,
+    height: 25,
+    width: 35,
     fontSize: 6,
-    textAlign: "center"
+    textAlign: "center",
+    flexWrap: 'wrap'
   },
   path45Stack: {
     width: 39,

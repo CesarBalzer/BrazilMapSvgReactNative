@@ -54,7 +54,7 @@ function MapaRegioes(props) {
 
 const styles = StyleSheet.create({
   container: {
-    // backgroundColor: 'yellow',
+    backgroundColor: 'yellow',
     alignItems: 'center',
     // justifyContent: 'center',
     // width: 467,
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     top: 40,
   },
   norteStack: {
-    // backgroundColor: 'gray',
+    backgroundColor: 'gray',
 
     width: 665,
     height: 639,

@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 import Svg, { Path } from "react-native-svg";
 
 function Amapa(props) {
   return (
+
     <View style={styles.ap2}>
       <View style={styles.path31Stack}>
         <Svg viewBox="-0.5 -0.5 68.49 75.94" style={styles.path31}>
@@ -17,6 +19,7 @@ function Amapa(props) {
         <Text style={styles.amapa}>Amapá</Text>
       </View>
     </View>
+
   );
 }
 

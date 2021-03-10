@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     borderColor: "transparent"
   },
   ceara: {
-    left: 0,
+    left: 5,
     position: "absolute",
     fontFamily: "roboto-regular",
     color: "#121212",
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     width: 51,
     fontSize: 6,
     textAlign: "center",
-    top: 21
+    top: 24
   },
   path46Stack: {
     width: 59,

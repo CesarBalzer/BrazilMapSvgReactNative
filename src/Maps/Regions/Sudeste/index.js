@@ -7,8 +7,8 @@ import SaoPaulo from "./SaoPaulo";
 
 function Index(props) {
   return (
-    <TouchableOpacity
-      onPress={() => { }}
+    <View
+
       style={styles.sudeste}
     >
       <View style={styles.mg2Stack}>
@@ -22,14 +22,14 @@ function Index(props) {
         <SaoPaulo />
       </View>
       <Text style={styles.sudeste3}>SUDESTE</Text>
-    </TouchableOpacity>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   sudeste: {
     position: "absolute",
-    top: 215,
+    top: -234,
     left: 247,
     height: 127,
     width: 160,

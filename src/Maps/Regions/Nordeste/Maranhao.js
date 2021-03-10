@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     borderColor: "transparent"
   },
   maranhao: {
-    top: 30,
+    top: 38,
     position: "absolute",
     fontFamily: "roboto-regular",
     color: "#121212",

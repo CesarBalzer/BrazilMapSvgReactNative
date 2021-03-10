@@ -9,42 +9,27 @@ import RegiaoSul from './Regions/Sul'
 import MatoGrosso from "./Regions/CentroOeste/MatoGrosso";
 import { useNavigation } from '@react-navigation/native';
 
-function MapaRegioes(props) {
+function MapaRegiao(props) {
 
   const navigation = useNavigation();
 
-  const handleNavigation = (to) => {
-    navigation.navigate(to);
+  const handleNavigation = () => {
+    navigation.navigate('Home');
   }
 
   return (
     <View style={styles.container}>
       <Text>Mapa do Brasil</Text>
       <View style={styles.norteStack}>
-        {/* <MatoGrosso /> */}
-        <TouchableOpacity onPress={() => handleNavigation('RegiaoNorte')}>
-          <RegiaoNorte />
-        </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => handleNavigation('RegiaoNordeste')}>
-          <RegiaoNordeste />
-        </TouchableOpacity>
-
-        <TouchableOpacity onPress={() => handleNavigation('RegiaoCentroOeste')}>
-          <RegiaoCentroOeste />
-        </TouchableOpacity>
-
-        <TouchableOpacity onPress={() => handleNavigation('RegiaoSudeste')}>
-          <RegiaoSudeste />
-        </TouchableOpacity>
-
-        <TouchableOpacity onPress={() => handleNavigation('RegiaoSul')}>
-          <RegiaoSul />
-        </TouchableOpacity>
-
+        {/* <RegiaoNorte />
+        <RegiaoNordeste />
+        <RegiaoCentroOeste />
+        <RegiaoSudeste />
+        <RegiaoSul /> */}
       </View>
       <View>
-        <TouchableOpacity onPress={() => handleNavigation('Home')}>
+        <TouchableOpacity onPress={() => handleNavigation()}>
           <Text>VOLTAR</Text>
         </TouchableOpacity>
       </View>
@@ -54,7 +39,7 @@ function MapaRegioes(props) {
 
 const styles = StyleSheet.create({
   container: {
-    // backgroundColor: 'yellow',
+    backgroundColor: 'yellow',
     alignItems: 'center',
     // justifyContent: 'center',
     // width: 467,
@@ -64,7 +49,7 @@ const styles = StyleSheet.create({
     top: 40,
   },
   norteStack: {
-    // backgroundColor: 'gray',
+    backgroundColor: 'gray',
 
     width: 665,
     height: 639,
@@ -74,4 +59,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default MapaRegioes;
+export default MapaRegiao;

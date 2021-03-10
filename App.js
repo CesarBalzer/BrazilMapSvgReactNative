@@ -1,46 +1,70 @@
+import 'react-native-gesture-handler';
+import React, { useContext, useState } from 'react';
+import * as Font from "expo-font";
+import { Image, Text, View } from 'react-native';
+import { Asset } from 'expo-asset';
+import AppLoading from 'expo-app-loading';
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { SvgXml } from 'react-native-svg';
-import Map from './src/Maps/Map'
-import BrMap from './src/Maps/BrMap'
+// import Router from './src/routes'
+
+import { NavigationContainer } from '@react-navigation/native';
+import { AuthProvider } from './src/contexts/auth'
+import { ThemeContext, ThemeProvider } from './src/contexts/theme'
 import Routes from './src/routes'
+
 
 const App = () => {
 
+  const [assetsLoaded, setAssetsLoaded] = useState(false);
 
+  const cacheResourcesAsync = async () => {
+    const fontAssets = cacheFonts([
+      { 'roboto-regular': require("./assets/fonts/roboto-regular.ttf") },
+    ]);
+
+    await Font.loadAsync({
+      'roboto-regular': require("./assets/fonts/roboto-regular.ttf"),
+    });
+
+    const images = [require('./assets/adaptive-icon.png')];
+
+    const cacheImages = images.map(image => {
+      return Asset.fromModule(image).downloadAsync();
+    });
+    await Promise.all([...cacheImages, ...fontAssets]);
+    return Promise.all(cacheImages);
+  }
+  const cacheFonts = (fonts) => {
+    return fonts.map((font) => Font.loadAsync(font));
+  }
+
+  if (!assetsLoaded) {
+    return (
+      <AppLoading
+        startAsync={cacheResourcesAsync()}
+        onFinish={() => setAssetsLoaded(true)}
+        onError={console.warn}
+      />
+    );
+  }
+
+  const { dark } = useContext(ThemeContext)
+
+  // console.log({ "THEME => ": dark })
 
   return (
-    <Routes />
-    // <View style={styles.container}>
-    //   <View style={styles.mapbox}>
-    //     <Map />
-    //   </View>
-    // </View>
-
+    <NavigationContainer>
+      <ThemeProvider>
+        <AuthProvider>
+          <Routes />
+        </AuthProvider>
+      </ThemeProvider>
+    </NavigationContainer>
   );
+
+
+
+
 }
 
-const styles = StyleSheet.create({
-  container: {
-    // flex: 1,
-    // backgroundColor: '#fff',
-    // // alignItems: 'center',
-    // // justifyContent: 'center',
-    // width: '100%',
-    // height: '100%'
-  },
-  mapbox: {
-    // display: 'flex',
-    // justifyContent: 'center',
-    // alignItems: 'center',
-    // marginTop: 100,
-    // backgroundColor: 'green',
-    // alignItems: 'center',
-    // justifyContent: 'center',
-    // width: 500,
-    // height: 600,
-  }
-});
-
-export default App
+export default App;

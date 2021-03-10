@@ -13,10 +13,7 @@ import Sergipe from "./Sergipe";
 
 function Index(props) {
   return (
-    <TouchableOpacity
-      onPress={() => { }}
-      style={styles.nordeste}
-    >
+    <View style={styles.nordeste}>
       <View style={styles.pe2StackStack}>
         <View style={styles.pe2Stack}>
           <Pernambuco />
@@ -31,14 +28,14 @@ function Index(props) {
         </View>
         <Sergipe />
       </View>
-    </TouchableOpacity>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   nordeste: {
     position: "absolute",
-    top: 73,
+    top: -376,
     left: 300,
     height: 196,
     width: 165,

@@ -8,8 +8,7 @@ import MatoGrossoDoSul from "./MatoGrossoDoSul";
 
 function Index(props) {
   return (
-    <TouchableOpacity
-      onPress={() => { }}
+    <View
       style={styles.centroOeste}
     >
       <View style={styles.go2Stack}>
@@ -24,7 +23,7 @@ function Index(props) {
         <MatoGrosso />
         <Text style={styles.centroOeste3}>CENTRO-OESTE</Text>
       </View>
-    </TouchableOpacity>
+    </View>
   );
 }
 
@@ -32,7 +31,7 @@ const styles = StyleSheet.create({
 
   centroOeste: {
     position: "absolute",
-    top: 139,
+    top: -310,
     left: 147,
     height: 196,
     width: 187,

@@ -11,7 +11,7 @@ import Acre from './Acre'
 
 function Index(props) {
   return (
-    <TouchableOpacity style={styles.norte}>
+    <View style={styles.norte}>
       <View style={styles.pa30StackStack}>
         <View style={styles.pa30Stack}>
           <Para />
@@ -23,7 +23,7 @@ function Index(props) {
         </View>
         <Acre />
       </View>
-    </TouchableOpacity>
+    </View>
   );
 }
 

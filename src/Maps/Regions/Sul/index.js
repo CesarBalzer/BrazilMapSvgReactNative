@@ -8,8 +8,8 @@ import RioGrandeDoSul from './RioGrandeDoSul'
 
 function Index(props) {
   return (
-    <TouchableOpacity
-      onPress={() => { }}
+    <View
+
       style={styles.sul}
     >
       <View style={styles.rs2Stack}>
@@ -18,14 +18,14 @@ function Index(props) {
         <RioGrandeDoSul />
         <Text style={styles.sul3}>SUL</Text>
       </View>
-    </TouchableOpacity>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   sul: {
     position: "absolute",
-    top: 309,
+    top: -139,
     left: 201,
     height: 130,
     width: 114,

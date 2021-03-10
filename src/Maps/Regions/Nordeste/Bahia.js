@@ -40,8 +40,8 @@ const styles = StyleSheet.create({
     borderColor: "transparent"
   },
   bahia: {
-    top: 31,
-    left: 14,
+    top: 37,
+    left: 24,
     position: "absolute",
     fontFamily: "roboto-regular",
     color: "#121212",

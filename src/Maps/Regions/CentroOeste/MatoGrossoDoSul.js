@@ -43,12 +43,12 @@ const styles = StyleSheet.create({
     position: "absolute",
     fontFamily: "roboto-regular",
     color: "#121212",
-    height: 22,
+    height: 40,
     width: 35,
     fontSize: 8,
     textAlign: "center",
     top: 19,
-    left: 24
+    left: 22
   },
   path50Stack: {
     width: 85,
